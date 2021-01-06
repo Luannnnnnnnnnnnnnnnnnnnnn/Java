@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Baitap3_11 {
+class Cau6{
     static boolean checkPerfectSquare(double x)
     {
         double sq = Math.sqrt(x);
