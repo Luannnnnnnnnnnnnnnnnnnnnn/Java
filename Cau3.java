@@ -1,29 +1,18 @@
-import java.text.DecimalFormat;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Cau3 {
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int aNumber, bNumber;
-        double nghiem;
-        DecimalFormat decimalFormat = new DecimalFormat("#.##");
-        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhập số nguyên dương n = ");
+        int n = scanner.nextInt();
 
-        System.out.print("Nhập vào số a: ");
-        aNumber = scanner.nextInt();
-        System.out.print("Nhập vào số b: ");
-        bNumber = scanner.nextInt();
-        System.out.println("Phương trình bạn vừa nhập vào là: " + aNumber + "x + " + bNumber + " = 0.");
-        if (aNumber == 0) {
-            if (bNumber == 0) {
-                System.out.println("Phương trình này có vô số nghiệm.");
-            } else {
-                System.out.println("Phương trình vô nghiệm.");
-            }
-        } else {
-            nghiem = (double) -bNumber / aNumber;
-            System.out.println("Phương trình có nghiệm x = " + decimalFormat.format(nghiem) + ".");
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for (int i =1; i < n + 1; i++) {
+            map.put(i, i * i);
         }
+        System.out.println(map);
     }
-
 }
